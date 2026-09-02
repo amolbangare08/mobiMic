@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Debug-only overlay.
+
+  The capture service is not exported in the shipped app. Debug builds export it so
+  the whole capture and streaming path can be driven from adb:
+
+      adb shell am start-foreground-service -n com.amol.mobimic/.service.MicService \
+          -a com.amol.mobimic.START
+
+  That keeps testing off the touchscreen, which matters when the device is one
+  somebody is actually using.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+        <service
+            android:name=".service.MicService"
+            android:exported="true"
+            tools:replace="android:exported" />
+    </application>
+
+</manifest>

@@ -1,0 +1,27 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+receiver_state.json
+
+# Build logs written by the local build loop
+build.log
+
+# Per-device jitter buffer figures the receiver learns; machine-specific
+pc/receiver_state.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
